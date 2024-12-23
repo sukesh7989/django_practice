@@ -7,4 +7,39 @@ product
 <div class="progress">
     <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
   </div>
+
+<div>
+
+    <div><h1>{{i.stu_name}} </h1></div>
+    <div><h1>{{i.stu_father}} </h1></div>
+    <div><h1>{{i.joindate}} </h1></div>
+    <div><h1>{{i.stu_class}} </h1></div>
+    <div><h1>{{i.fees}} </h1></div>
+
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Student Name</th>
+          <th scope="col">Student Father</th>
+          <th scope="col">Joindate</th>
+          <th scope="col">Student Class</th>
+          <th scope="col">Fees</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in data %}
+        <tr>
+          <th scope="row">{{i.stu_name}}</th>
+          <td>{{i.stu_father}}</td>
+          <td>{{i.joindate}}</td>
+          <td>{{i.stu_class}}</td>
+          <td>{{i.fees}}</td>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+</div>
+
+
 {%endblock content%}
